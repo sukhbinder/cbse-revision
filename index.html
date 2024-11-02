@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Viewer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-200 text-black h-screen">
+  <div class="container mx-auto p-4 pt-6 md:p-8">
+    <h1 class="text-3xl font-bold mb-4">PDF Viewer Grid</h1>
+    <div id="pdfGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+
+  <!-- Include pdfFiles.js to load the pdfFiles array -->
+  <script src="pdfFiles.js"></script>
+
+  <script>
+    const pdfGrid = document.getElementById('pdfGrid');
+
+    pdfFiles.forEach(file => {
+      const pdfCard = document.createElement('div');
+      pdfCard.className = "relative w-full h-64 bg-white rounded-md shadow-lg";
+
+      pdfCard.innerHTML = `
+        <a href="${file}" target="_blank" class="absolute top-0 left-0 w-full h-full bg-gray-200 opacity-50 cursor-pointer transition duration-300 ease-in-out hover:bg-transparent flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m3-3v6m9-6a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </a>
+        <div class="overflow-hidden lazy-load" data-src="${file}">
+          <iframe frameborder="0" width="100%" height="100%" scrolling="no" loading="lazy"></iframe>
+        </div>
+      `;
+
+      pdfGrid.appendChild(pdfCard);
+    });
+
+    // Lazy loading using IntersectionObserver
+    const lazyLoadObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const iframeContainer = entry.target;
+          const iframe = iframeContainer.querySelector('iframe');
+          iframe.src = iframeContainer.getAttribute('data-src');
+          lazyLoadObserver.unobserve(iframeContainer); // Stop observing after loading
+        }
+      });
+    }, { rootMargin: '200px' }); // Preload slightly before entering view
+
+    // Attach lazy loader to each iframe container
+    document.querySelectorAll('.lazy-load').forEach(iframeContainer => {
+      lazyLoadObserver.observe(iframeContainer);
+    });
+  </script>
+</body>
+</html>
