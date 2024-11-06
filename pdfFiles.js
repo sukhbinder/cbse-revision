@@ -1,4 +1,7 @@
 const pdfFiles = [
+  "2024-11-05-19-49-viii-barun-science.pdf",
+  "2024-11-05-19-51-viii-barun-maths.pdf",
+  "2024-11-05-19-45-viii-barun-hindi.pdf",
   "2024-11-03-12-00-viii-barun-science-reproduction-friction.pdf",
   "2024-11-03-11-57-viii-barun-maths-cubes-sqares.pdf",
   "2024-10-14-study.pdf",
