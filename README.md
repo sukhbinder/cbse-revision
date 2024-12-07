@@ -1,7 +1,9 @@
 # CBSE Review App
 
-
 A web application built with Tailwind CSS and JavaScript to display PDF files that i made for my son's review for his cbse.
+
+Check it [here](https://sukhbinder.github.io/cbse-revision/) 
+
 
 ## Features
 ------------

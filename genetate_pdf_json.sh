@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create an array of all PDF files in the current directory
-pdf_files=($(ls -t *.pdf))
+pdf_files=($(ls -t pdfs/*.pdf))
 
 # Start writing to pdfFiles.js
 echo "const pdfFiles = [" > pdfFiles.js
