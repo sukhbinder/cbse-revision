@@ -1,4 +1,6 @@
 const pdfFiles = [
+  "2024-12-07-17-38-viii-barun-maths-line-mensuration.pdf",
+  "2024-12-06-18-48-viii-barun-maths.pdf",
   "2024-11-28-19-46-viii-maths-barun-mensuration.pdf",
   "2024-11-28-19-39-viii-barun-sound-science.pdf",
   "2024-11-25-19-28-viii-barun-mensuration.pdf",
