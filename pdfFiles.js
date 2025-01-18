@@ -1,4 +1,9 @@
 const pdfFiles = [
+  "pdfs/2025-01-17-18-28-viii-barun-science.pdf",
+  "pdfs/2025-01-17-18-15-viii-barun-maths.pdf",
+  "pdfs/2025-01-09-19-06-viii-maths-barun-factors.pdf",
+  "pdfs/2025-01-05-18-48-viii-barun-factors-men-varied.pdf",
+  "pdfs/2025-01-04-19-29-viii-maths-factorisation.pdf",
   "pdfs/2024-12-20-18-24-viii-maths-barun.pdf",
   "pdfs/2024-12-19-18-38-viii-science-barun-adalosence.pdf",
   "pdfs/2024-12-19-18-34-viii-maths-barun-mensuration-quantiies.pdf",
