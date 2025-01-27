@@ -1,4 +1,13 @@
 const pdfFiles = [
+  "pdfs/viii-barun-maths2025-01-27-18-46-study.pdf",
+  "pdfs/2025-01-26-16-14-viii-barun-history.pdf",
+  "pdfs/2025-01-23-19-36-viii-barun-diagrams.pdf",
+  "pdfs/2025-01-23-19-30-viii-barun-sound.pdf",
+  "pdfs/2025-01-23-17-49-viii-science-barun.pdf",
+  "pdfs/2025-01-19-19-31-viii-english-barun.pdf",
+  "pdfs/2025-01-19-17-19-viii-barun-english.pdf",
+  "pdfs/2025-01-18-18-09-viii-barun-maths-factorisation.pdf",
+  "pdfs/2025-01-18-18-06-viii-barun-english.pdf",
   "pdfs/2025-01-17-18-28-viii-barun-science.pdf",
   "pdfs/2025-01-17-18-15-viii-barun-maths.pdf",
   "pdfs/2025-01-09-19-06-viii-maths-barun-factors.pdf",
